@@ -2,17 +2,18 @@ import { isEqualObjects, isPlainObject } from './utils';
 
 class Store<T> {
     private state: T;
-    private listeners: ((state: T) => void)[] = [];
+    // private listeners: ((state: T) => void)[] = [];
+    private listeners = new Set<(state: T) => void>();
 
     public constructor(initialState: T) {
         this.state = initialState;
     }
 
     public subscribe(callback: (state: T) => void): () => void {
-        this.listeners.push(callback);
+        this.listeners.add(callback);
 
         return () => {
-            this.listeners = this.listeners.filter(l => l !== callback);
+            callback(this.state)
         };
     }
 

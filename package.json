@@ -18,13 +18,15 @@
   },
   "license": "ISC",
   "author": "Gagik Chilingaryan",
-  "main": "dist/pulsar.umd.js",
-  "module": "dist/pulsar.es.js",
-  "exports":{
-        ".":{
-            "import":"./dist/pulsar.umd.js",
-            "require": "./dist/pulsar.es.js"
-        }
+    "main": "./dist/pulsar.cjs.js",
+    "module": "./dist/pulsar.es.js",
+    "types": "./dist/main.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/pulsar.es.js",
+      "require": "./dist/pulsar.cjs.js",
+      "types": "./dist/main.d.ts"
+    }
   },
   "scripts": {
     "dev": "vite",
@@ -32,12 +34,12 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/node": "^25.5.0",
     "typescript": "~5.9.3",
-    "vite": "^8.0.0"
+    "vite": "^8.0.0",
+    "vite-plugin-dts": "^4.5.4"
   },
   "files": [
-        "dist",
-        "package.json",
-        "README.md"
+    "dist"
   ]
 }

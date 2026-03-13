@@ -1,5 +1,5 @@
 
-import { Store, Element } from '../../src/main';
+import { Store, Element } from 'pulsar';
 
 function App() {
     const store = new Store<string[]>([])
