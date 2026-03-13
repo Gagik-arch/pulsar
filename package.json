@@ -1,6 +1,6 @@
 {
   "name": "pulsar",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Reactive DOM framework without virtual DOM",
   "keywords": [
     "reactive",
@@ -18,8 +18,14 @@
   },
   "license": "ISC",
   "author": "Gagik Chilingaryan",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/pulsar.umd.js",
+  "module": "dist/pulsar.es.js",
+  "exports":{
+        ".":{
+            "import":"./dist/pulsar.umd.js",
+            "require": "./dist/pulsar.es.js"
+        }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

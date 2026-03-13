@@ -6,7 +6,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/main.js'),
       name: 'pulse',
-      fileName: (format) => `pulse.${format}.js`,
+      fileName: (format) => `pulsar.${format}.js`,
     },
     rollupOptions: {
 
