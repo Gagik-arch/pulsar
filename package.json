@@ -1,6 +1,6 @@
 {
   "name": "pulsar",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Reactive DOM framework without virtual DOM",
   "keywords": [
     "reactive",
@@ -31,6 +31,7 @@
   },
   "files": [
         "dist",
-        "package.json"
+        "package.json",
+        "README.md"
   ]
 }
